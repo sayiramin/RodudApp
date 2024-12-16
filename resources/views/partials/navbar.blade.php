@@ -16,6 +16,9 @@
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('users*') ? 'active' : '' }}" href="{{ route('users.index') }}">Users</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('users*') ? 'active' : '' }}" href="{{ route('notifications.index') }}">Notifications</a>
+                    </li>
                 </ul>
                 <form action="{{ route('logout') }}" method="POST" class="d-flex">
                     @csrf
