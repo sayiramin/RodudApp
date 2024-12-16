@@ -27,7 +27,7 @@ This Admin Panel is a Laravel-based web application designed to:
 - User Management: Manage registered users.
 - Notifications: Get notified on new order creation and mark notifications as read.
 - Authentication: Secure login/logout system.
-- 
+
 ## Installation & Setup Guide
 ## Requirements
 - PHP >= 8.3+
@@ -40,7 +40,7 @@ This Admin Panel is a Laravel-based web application designed to:
 ### 1. Clone the Repository
 ```
 https://github.com/sayiramin/RodudApp.git
-cd truck-booking-api
+cd truck-booking-admin
 ```
 
 ### 2. Install PHP dependencies using Composer
