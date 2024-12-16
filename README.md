@@ -44,25 +44,41 @@ cd truck-booking-admin
 ```
 
 ##### 2. Install PHP dependencies using Composer
-```composer install```
+```
+composer install
+```
 
 ##### If you have front-end assets to compile, install JavaScript dependencies
-```npm install```
+```
+npm install
+```
 
 ##### 3. Copy the example .env file to .env
-```cp .env.example .env```
+```
+cp .env.example .env
+```
 
 ##### 4. Generate the application key (if not set in the .env file)
-```php artisan key:generate```
+```
+php artisan key:generate
+```
 
 ##### 5. Run database migrations to create the necessary tables
-```php artisan migrate```
+```
+php artisan migrate
+```
 
 ##### Optionally, run the seeders to populate the database with default data
-```php artisan db:seed```
+```
+php artisan db:seed
+```
 
 ##### 6. Install Sanctum for API authentication
-```php artisan sanctum:install```
+```
+php artisan sanctum:install
+```
 
 ##### 7. Start the Laravel development server
-```php artisan serve```
+```
+php artisan serve
+```
