@@ -37,32 +37,32 @@ This Admin Panel is a Laravel-based web application designed to:
 
 ### Steps to Install
 
-### 1. Clone the Repository
+##### 1. Clone the Repository
 ```
 https://github.com/sayiramin/RodudApp.git
 cd truck-booking-admin
 ```
 
-### 2. Install PHP dependencies using Composer
+##### 2. Install PHP dependencies using Composer
 ```composer install```
 
-### If you have front-end assets to compile, install JavaScript dependencies
+##### If you have front-end assets to compile, install JavaScript dependencies
 ```npm install```
 
-### 3. Copy the example .env file to .env
+##### 3. Copy the example .env file to .env
 ```cp .env.example .env```
 
-### 4. Generate the application key (if not set in the .env file)
+##### 4. Generate the application key (if not set in the .env file)
 ```php artisan key:generate```
 
-### 5. Run database migrations to create the necessary tables
+##### 5. Run database migrations to create the necessary tables
 ```php artisan migrate```
 
-### Optionally, run the seeders to populate the database with default data
+##### Optionally, run the seeders to populate the database with default data
 ```php artisan db:seed```
 
-### 6. Install Sanctum for API authentication
+##### 6. Install Sanctum for API authentication
 ```php artisan sanctum:install```
 
-### 7. Start the Laravel development server
+##### 7. Start the Laravel development server
 ```php artisan serve```
