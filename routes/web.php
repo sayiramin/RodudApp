@@ -22,6 +22,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     // Users
     Route::resource('users', UserController::class)->except(['create', 'store', 'show', 'edit']);
+    Route::post('/users/{id}/send-email', [UserController::class, 'sendEmail'])->name('users.sendEmail');
+    Route::post('/users/{id}/send-sms', [UserController::class, 'sendSms'])->name('users.sendSms');
+
 
     //Notification
     Route::get('/notifications', [NotificationController::class, 'index'])->name('notifications.index');

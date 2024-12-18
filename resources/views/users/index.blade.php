@@ -35,6 +35,7 @@
             <th>Is Admin</th>
             <th>Created At</th>
             <th>Updated At</th>
+            <th>Actions</th>
             <!-- Future actions like edit or delete can be added here -->
         </tr>
         </thead>
@@ -49,6 +50,21 @@
                 <td>{{ $user->is_admin ? 'Yes' : 'No' }}</td>
                 <td>{{ $user->created_at->format('Y-m-d') }}</td>
                 <td>{{ $user->updated_at->format('Y-m-d') }}</td>
+                <td>
+                    <form method="POST" action="{{ route('users.sendEmail', $user->id) }}" style="display: inline;">
+                        @csrf
+                        <input type="text" name="subject" placeholder="Email Subject" required class="form-control mb-2">
+                        <textarea name="message" placeholder="Email Message" required class="form-control mb-2"></textarea>
+                        <button type="submit" class="btn btn-sm btn-primary">Send Email</button>
+                    </form>
+
+                    <form method="POST" action="{{ route('users.sendSms', $user->id) }}" style="display: inline;">
+                        @csrf
+                        <textarea name="message" placeholder="SMS Message" required class="form-control mb-2"></textarea>
+                        <button type="submit" class="btn btn-sm btn-secondary">Send SMS</button>
+                    </form>
+                </td>
+
             </tr>
         @empty
             <tr>
